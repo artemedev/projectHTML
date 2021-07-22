@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #c4c4c4;
+}
+
+.right-container {
+  margin-left: 25%;
+}
+
+.menu {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background: #2a2a22;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  margin: 50px 15px;
+}
+
+.logo-link {
+  display: block;
+  max-width: 212px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Druk Cyr", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 53px;
+  letter-spacing: 0.15em;
+}
+
+.menu-link + .menu-link {
+  margin-top: 10px;
+}
+
+.social {
+  /* margin-top: 150px; */
+  margin-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-img {
+  width: 33px;
+  height: 33px;
+}
+
+.social-img:hover,
+.menu-link:hover {
+  opacity: 0.6;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.season {
+  /* //background-color: #c4c4c4; */
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.season-title {
+  font-family: "Druk Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 91px;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.season-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+.series-container {
+  max-width: 230px;
+  margin: 10px 25px;
+}
+
+.series-img {
+  width: 100%;
+}
+
+.series-name {
+  font-family: "Druk Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.15em;
+  color: #000000;
+  text-align: center;
+}
+
+.series-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.series-title {
+  font-family: "Druk Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.person-title {
+  font-family: "Druk Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.person-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.person-container {
+  max-width: 230px;
+  margin: 10px 25px;
+  display: block;
+}
+
+.person-container:hover {
+  box-shadow: 0 28px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.person-img {
+  width: 100%;
+  display: block;
+}
+
+.person-name {
+  font-family: "Druk Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.15em;
+  color: #000000;
+  text-align: center;
+}
+
+.menu-title {
+  color: #fff;
+  font-family: "Druk Cyr", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 53px;
+  letter-spacing: 0.15em;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+#menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 15;
+}
+
+@media (max-width: 1000px) {
+  #menu-toggle {
+    /* display: n; */
+  }
+  #menu-toggle:checked ~ .menu {
+    visibility: visible;
+    width: 100vw;
+  }
+  .right-container {
+    margin-left: 0;
+  }
+  .logo-container {
+    margin: 5px;
+  }
+  .social {
+    margin: 5px;
+  }
+  .menu {
+    visibility: hidden;
+  }
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+  }
+  .menu-btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  #menu-toggle:checked ~ .menu-btn > span {
+    transform: rotate(45deg);
+    background-color: #ffffff;
+
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #ffffff;
+
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #ffffff;
+
+  }
+}
